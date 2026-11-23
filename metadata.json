@@ -1,0 +1,6 @@
+{
+  "name": "Vortex",
+  "description": "Independent privacy-focused Android browser with Vortex Search, built-in ad & tracker blocking, multi-tab incognito browsing, AI page summarization, and cloud sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

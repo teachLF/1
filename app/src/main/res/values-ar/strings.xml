@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Vortex</string>
+
+    <!-- Auth & Onboarding -->
+    <string name="auth_tagline">مستقل. حر. خاص بك.</string>
+    <string name="auth_subtitle">بدون بحث جوجل وبدون بينغ. مدعوم بمحرك Vortex المستقل، ودرع مدمج لحظر الإعلانات والمتتبعات، وذكاء اصطناعي لتلخيص الصفحات.</string>
+    <string name="auth_sign_in_google">تسجيل الدخول عبر Google</string>
+    <string name="auth_sync_note">يُستخدم الحساب فقط لمزامنة إشاراتك المرجعية وسجلك وإعداداتك بأمان عبر أجهزتك.</string>
+    <string name="auth_signing_in">جارٍ الاتصال بسحابة Vortex…</string>
+    <string name="auth_feature_independent">بحث مستقل 100% بعيداً عن جوجل وبينغ</string>
+    <string name="auth_feature_shield">درع VortexShield لحظر الإعلانات والمتتبعات</string>
+    <string name="auth_feature_ai">تلخيص الصفحات وبحث ذكي بالذكاء الاصطناعي</string>
+
+    <!-- Start Page & Search -->
+    <string name="search_or_enter_url">ابحث باستقلالية أو أدخل رابطاً…</string>
+    <string name="vortex_start_subtitle">مستكشف الويب المستقل</string>
+    <string name="search_engine_label">محرك البحث</string>
+    <string name="engine_vortex_native">بحث Vortex</string>
+    <string name="engine_brave">فهرس Brave</string>
+    <string name="engine_mojeek">Mojeek</string>
+    <string name="engine_wikipedia">ويكيبيديا</string>
+    <string name="shield_blocked_session">إعلان ومتتبع تم حظرهم</string>
+    <string name="shield_active">الدرع نشط</string>
+    <string name="shield_paused">الدرع متوقف مؤقتاً</string>
+    <string name="speed_dial_title">الوصول السريع</string>
+    <string name="speed_dial_empty">أضف أي موقع للإشارات المرجعية لتثبيته هنا للوصول الفوري.</string>
+    <string name="discover_independent">استكشف المحركات المستقلة</string>
+
+    <!-- Native Search Hub -->
+    <string name="vortex_ai_answer_title">الملخص الذكي من Vortex AI</string>
+    <string name="vortex_ai_generating">جارٍ توليد إجابة مستقلة ذكية…</string>
+    <string name="vortex_ai_disabled">الملخص الذكي متوقف من الإعدادات.</string>
+    <string name="open_in_brave">فتح نتائج الويب الكاملة في Brave</string>
+    <string name="open_in_mojeek">فتح نتائج الويب الكاملة في Mojeek</string>
+    <string name="knowledge_results_title">نتائج المعرفة المستقلة</string>
+    <string name="no_wiki_results">لا توجد مطابقات موسوعية مباشرة. استكشف نتائج الويب عبر Brave أو Mojeek أعلاه.</string>
+    <string name="search_error_prefix">تعذر البحث:</string>
+    <string name="retry">إعادة المحاولة</string>
+
+    <!-- Browser Controls & Menu -->
+    <string name="cd_back">رجوع</string>
+    <string name="cd_forward">تقدم</string>
+    <string name="cd_home">الصفحة الرئيسية</string>
+    <string name="cd_tabs">التبويبات</string>
+    <string name="cd_ai_summary">ملخص AI</string>
+    <string name="cd_more_menu">المزيد من الخيارات</string>
+    <string name="cd_reload">إعادة تحميل</string>
+    <string name="cd_stop">إيقاف التحميل</string>
+    <string name="cd_clear">مسح النص</string>
+    <string name="cd_close">إغلاق</string>
+    <string name="cd_bookmark_page">إضافة إشارة مرجعية</string>
+    <string name="cd_remove_bookmark">إزالة الإشارة المرجعية</string>
+    <string name="cd_incognito_badge">وضع الشبح الخفي</string>
+    <string name="cd_shield_status">حماية VortexShield</string>
+    <string name="menu_new_tab">تبويب جديد</string>
+    <string name="menu_new_incognito">تبويب شبح خفي</string>
+    <string name="menu_bookmark_add">إضافة إلى الإشارات</string>
+    <string name="menu_bookmark_remove">إزالة من الإشارات</string>
+    <string name="menu_bookmarks_history">الإشارات والسجل</string>
+    <string name="menu_downloads">التنزيلات</string>
+    <string name="menu_find_in_page">البحث في الصفحة</string>
+    <string name="menu_desktop_site">موقع سطح المكتب</string>
+    <string name="menu_share">مشاركة الرابط</string>
+    <string name="menu_settings">إعدادات Vortex</string>
+    <string name="menu_sign_out">تسجيل الخروج</string>
+
+    <!-- Find in Page -->
+    <string name="find_hint">ابحث داخل الصفحة…</string>
+    <string name="find_next">النتيجة التالية</string>
+    <string name="find_prev">النتيجة السابقة</string>
+
+    <!-- Tabs & Phantom Mode -->
+    <string name="tabs_title">التبويبات المفتوحة</string>
+    <string name="new_tab_title">تبويب جديد</string>
+    <string name="phantom_tab_title">تبويب خفي</string>
+    <string name="phantom_banner">وضع الشبح: يتم مسح السجل وملفات الارتباط فور الإغلاق.</string>
+    <string name="close_all_incognito">إغلاق التبويبات الخفية</string>
+
+    <!-- Library (Bookmarks & History) -->
+    <string name="library_title">مكتبة Vortex</string>
+    <string name="tab_bookmarks">الإشارات المرجعية</string>
+    <string name="tab_history">سجل التصفح</string>
+    <string name="empty_bookmarks">لا توجد إشارات مرجعية متزامنة بعد.</string>
+    <string name="empty_history">سجل التصفح نظيف تماماً.</string>
+    <string name="clear_history">مسح السجل</string>
+    <string name="filter_library">تصفية بالعنوان أو النطاق…</string>
+
+    <!-- Downloads -->
+    <string name="downloads_title">التنزيلات</string>
+    <string name="downloads_empty">لم تبدأ أي تنزيلات في هذه الجلسة بعد.</string>
+    <string name="downloads_started">بدأ التنزيل: %1$s</string>
+    <string name="downloads_open_system">فتح مدير التنزيلات</string>
+    <string name="download_status_running">جارٍ التنزيل</string>
+    <string name="download_status_completed">مكتمل</string>
+    <string name="download_status_failed">فشل</string>
+    <string name="download_status_pending">قيد الانتظار</string>
+
+    <!-- AI Page Summarizer -->
+    <string name="ai_summary_title">ذكاء Vortex لتلخيص الصفحات</string>
+    <string name="ai_summary_extracting">جارٍ قراءة محتوى الصفحة…</string>
+    <string name="ai_summary_streaming">جارٍ استخلاص أهم النقاط…</string>
+    <string name="ai_summary_empty_page">افتح أي صفحة ويب أو مقال أولاً لتلخيصه بالذكاء الاصطناعي.</string>
+    <string name="ai_ask_followup">اسأل سؤالاً حول هذه الصفحة…</string>
+    <string name="cd_send_question">إرسال السؤال</string>
+
+    <!-- Settings -->
+    <string name="settings_title">إعدادات Vortex</string>
+    <string name="settings_search_section">محرك البحث المستقل</string>
+    <string name="settings_privacy_section">الخصوصية والدرع</string>
+    <string name="settings_adblock_title">درع VortexShield للإعلانات والمتتبعات</string>
+    <string name="settings_adblock_desc">يحظر شبكات الإعلانات والمتتبعات ونصوص التتبع.</string>
+    <string name="settings_ai_title">ملخص Vortex AI الفوري</string>
+    <string name="settings_ai_desc">عرض ملخص ذكي فوري في بحث Vortex المدمج.</string>
+    <string name="settings_js_title">تفعيل JavaScript</string>
+    <string name="settings_js_desc">مطلوب لمعظم المواقع التفاعلية الحديثة.</string>
+    <string name="settings_desktop_title">طلب نسخة سطح المكتب افتراضياً</string>
+    <string name="settings_desktop_desc">استخدام هوية متصفح سطح المكتب للتبويبات الجديدة.</string>
+    <string name="settings_account_section">حساب المزامنة السحابية</string>
+    <string name="settings_signed_in_as">مسجل الدخول باسم %1$s</string>
+
+    <!-- Messages -->
+    <string name="bookmark_saved">تم الحفظ في إشارات Vortex</string>
+    <string name="bookmark_removed">تمت الإزالة من الإشارات</string>
+    <string name="history_cleared">تم مسح سجل التصفح المتزامن</string>
+</resources>

@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isValidBookmark(data, userId) {
+      return data.userId is string && data.userId == userId &&
+             data.title is string && data.title.size() >= 1 && data.title.size() <= 200 &&
+             data.url is string && data.url.size() >= 1 && data.url.size() <= 2048 &&
+             data.domain is string && data.domain.size() >= 1 && data.domain.size() <= 255 &&
+             data.createdAt is timestamp && data.createdAt <= request.time &&
+             data.updatedAt is timestamp && data.updatedAt <= request.time;
+    }
+
+    function isValidHistoryEntry(data, userId) {
+      return data.userId is string && data.userId == userId &&
+             data.title is string && data.title.size() >= 1 && data.title.size() <= 200 &&
+             data.url is string && data.url.size() >= 1 && data.url.size() <= 2048 &&
+             data.domain is string && data.domain.size() >= 1 && data.domain.size() <= 255 &&
+             data.visitedAt is timestamp && data.visitedAt <= request.time;
+    }
+
+    function isValidUserPreferences(data, userId) {
+      return data.userId is string && data.userId == userId &&
+             data.defaultEngine is string &&
+             data.defaultEngine in ['VORTEX_NATIVE', 'BRAVE', 'MOJEEK', 'WIKIPEDIA'] &&
+             data.adBlockEnabled is bool &&
+             data.aiSearchEnabled is bool &&
+             data.javascriptEnabled is bool &&
+             data.desktopModeDefault is bool &&
+             data.updatedAt is timestamp && data.updatedAt <= request.time;
+    }
+
+    match /users/{userId}/bookmarks/{bookmarkId} {
+      allow get: if isOwner(userId) && isValidId(bookmarkId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) &&
+                       isValidId(bookmarkId) &&
+                       incoming().keys().hasAll(['userId', 'title', 'url', 'domain', 'createdAt', 'updatedAt']) &&
+                       incoming().keys().hasOnly(['userId', 'title', 'url', 'domain', 'createdAt', 'updatedAt']) &&
+                       isValidBookmark(incoming(), userId);
+      allow update: if isOwner(userId) &&
+                       isValidId(bookmarkId) &&
+                       isValidBookmark(incoming(), userId) &&
+                       incoming().userId == existing().userId &&
+                       incoming().createdAt == existing().createdAt &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['title', 'url', 'domain', 'updatedAt']);
+      allow delete: if isOwner(userId) && isValidId(bookmarkId);
+    }
+
+    match /users/{userId}/history/{entryId} {
+      allow get: if isOwner(userId) && isValidId(entryId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) &&
+                       isValidId(entryId) &&
+                       incoming().keys().hasAll(['userId', 'title', 'url', 'domain', 'visitedAt']) &&
+                       incoming().keys().hasOnly(['userId', 'title', 'url', 'domain', 'visitedAt']) &&
+                       isValidHistoryEntry(incoming(), userId);
+      allow update: if isOwner(userId) &&
+                       isValidId(entryId) &&
+                       isValidHistoryEntry(incoming(), userId) &&
+                       incoming().userId == existing().userId &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['title', 'url', 'domain', 'visitedAt']);
+      allow delete: if isOwner(userId) && isValidId(entryId);
+    }
+
+    match /users/{userId}/settings/{settingId} {
+      allow get: if isOwner(userId) && isValidId(settingId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) &&
+                       isValidId(settingId) &&
+                       incoming().keys().hasAll([
+                         'userId', 'defaultEngine', 'adBlockEnabled',
+                         'aiSearchEnabled', 'javascriptEnabled', 'desktopModeDefault', 'updatedAt'
+                       ]) &&
+                       incoming().keys().hasOnly([
+                         'userId', 'defaultEngine', 'adBlockEnabled',
+                         'aiSearchEnabled', 'javascriptEnabled', 'desktopModeDefault', 'updatedAt'
+                       ]) &&
+                       isValidUserPreferences(incoming(), userId);
+      allow update: if isOwner(userId) &&
+                       isValidId(settingId) &&
+                       isValidUserPreferences(incoming(), userId) &&
+                       incoming().userId == existing().userId &&
+                       incoming().diff(existing()).affectedKeys().hasOnly([
+                         'defaultEngine', 'adBlockEnabled', 'aiSearchEnabled',
+                         'javascriptEnabled', 'desktopModeDefault', 'updatedAt'
+                       ]);
+      allow delete: if isOwner(userId) && isValidId(settingId);
+    }
+  }
+}

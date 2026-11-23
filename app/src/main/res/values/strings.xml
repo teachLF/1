@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Vortex</string>
+
+    <!-- Auth & Onboarding -->
+    <string name="auth_tagline">Independent. Unfiltered. Yours.</string>
+    <string name="auth_subtitle">Zero Google Search. Zero Bing. Powered by Vortex independent index, built-in ad &amp; tracker shield, and AI page intelligence.</string>
+    <string name="auth_sign_in_google">Sign in with Google</string>
+    <string name="auth_sync_note">Your account is used solely to encrypt and sync your bookmarks, history, and preferences across devices.</string>
+    <string name="auth_signing_in">Connecting to Vortex Cloud…</string>
+    <string name="auth_feature_independent">100% Non-Google &amp; Non-Bing Search</string>
+    <string name="auth_feature_shield">VortexShield Ad &amp; Tracker Blocker</string>
+    <string name="auth_feature_ai">AI Page Summary &amp; Smart Synthesis</string>
+
+    <!-- Start Page & Search -->
+    <string name="search_or_enter_url">Search independently or enter URL…</string>
+    <string name="vortex_start_subtitle">Independent Web Explorer</string>
+    <string name="search_engine_label">Search Engine</string>
+    <string name="engine_vortex_native">Vortex Search</string>
+    <string name="engine_brave">Brave Index</string>
+    <string name="engine_mojeek">Mojeek</string>
+    <string name="engine_wikipedia">Wikipedia</string>
+    <string name="shield_blocked_session">Trackers &amp; Ads Blocked</string>
+    <string name="shield_active">Shield Active</string>
+    <string name="shield_paused">Shield Paused</string>
+    <string name="speed_dial_title">Quick Access</string>
+    <string name="speed_dial_empty">Bookmark any site to pin it here for one-tap launch.</string>
+    <string name="discover_independent">Explore Independent Engines</string>
+
+    <!-- Native Search Hub -->
+    <string name="vortex_ai_answer_title">Vortex AI Instant Brief</string>
+    <string name="vortex_ai_generating">Synthesizing independent answer…</string>
+    <string name="vortex_ai_disabled">AI Instant Brief is turned off in Settings.</string>
+    <string name="open_in_brave">Open full web results in Brave</string>
+    <string name="open_in_mojeek">Open full web results in Mojeek</string>
+    <string name="knowledge_results_title">Independent Knowledge Results</string>
+    <string name="no_wiki_results">No encyclopedia matches found. Explore full web results via Brave or Mojeek above.</string>
+    <string name="search_error_prefix">Search failed:</string>
+    <string name="retry">Retry</string>
+
+    <!-- Browser Controls & Menu -->
+    <string name="cd_back">Back</string>
+    <string name="cd_forward">Forward</string>
+    <string name="cd_home">Start Page</string>
+    <string name="cd_tabs">Tabs</string>
+    <string name="cd_ai_summary">AI Summary</string>
+    <string name="cd_more_menu">More options</string>
+    <string name="cd_reload">Reload</string>
+    <string name="cd_stop">Stop loading</string>
+    <string name="cd_clear">Clear input</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_bookmark_page">Bookmark page</string>
+    <string name="cd_remove_bookmark">Remove bookmark</string>
+    <string name="cd_incognito_badge">Phantom Incognito</string>
+    <string name="cd_shield_status">VortexShield protection</string>
+    <string name="menu_new_tab">New Tab</string>
+    <string name="menu_new_incognito">New Phantom Tab</string>
+    <string name="menu_bookmark_add">Add Bookmark</string>
+    <string name="menu_bookmark_remove">Remove Bookmark</string>
+    <string name="menu_bookmarks_history">Bookmarks &amp; History</string>
+    <string name="menu_downloads">Downloads</string>
+    <string name="menu_find_in_page">Find in Page</string>
+    <string name="menu_desktop_site">Desktop Site</string>
+    <string name="menu_share">Share Link</string>
+    <string name="menu_settings">Vortex Settings</string>
+    <string name="menu_sign_out">Sign Out</string>
+
+    <!-- Find in Page -->
+    <string name="find_hint">Find in page…</string>
+    <string name="find_next">Next match</string>
+    <string name="find_prev">Previous match</string>
+
+    <!-- Tabs & Phantom Mode -->
+    <string name="tabs_title">Open Tabs</string>
+    <string name="new_tab_title">New Tab</string>
+    <string name="phantom_tab_title">Phantom Tab</string>
+    <string name="phantom_banner">Phantom Mode: History &amp; cookies are discarded when closed.</string>
+    <string name="close_all_incognito">Close Phantom Tabs</string>
+
+    <!-- Library (Bookmarks & History) -->
+    <string name="library_title">Vortex Library</string>
+    <string name="tab_bookmarks">Bookmarks</string>
+    <string name="tab_history">History</string>
+    <string name="empty_bookmarks">No synced bookmarks yet.</string>
+    <string name="empty_history">Your browsing history is clean.</string>
+    <string name="clear_history">Clear History</string>
+    <string name="filter_library">Filter by title or domain…</string>
+
+    <!-- Downloads -->
+    <string name="downloads_title">Downloads</string>
+    <string name="downloads_empty">No downloads started in this session yet.</string>
+    <string name="downloads_started">Download started: %1$s</string>
+    <string name="downloads_open_system">Open System Downloads</string>
+    <string name="download_status_running">Downloading</string>
+    <string name="download_status_completed">Completed</string>
+    <string name="download_status_failed">Failed</string>
+    <string name="download_status_pending">Pending</string>
+
+    <!-- AI Page Summarizer -->
+    <string name="ai_summary_title">Vortex AI Page Intelligence</string>
+    <string name="ai_summary_extracting">Reading page content…</string>
+    <string name="ai_summary_streaming">Analyzing key insights…</string>
+    <string name="ai_summary_empty_page">Open any webpage or article first to generate an AI summary.</string>
+    <string name="ai_ask_followup">Ask a question about this page…</string>
+    <string name="cd_send_question">Send question</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Vortex Settings</string>
+    <string name="settings_search_section">Independent Search Engine</string>
+    <string name="settings_privacy_section">Privacy &amp; Shield</string>
+    <string name="settings_adblock_title">VortexShield Ad &amp; Tracker Blocker</string>
+    <string name="settings_adblock_desc">Blocks ad networks, trackers, and telemetry scripts.</string>
+    <string name="settings_ai_title">Vortex AI Smart Brief</string>
+    <string name="settings_ai_desc">Show streaming AI synthesis in Vortex Native Search.</string>
+    <string name="settings_js_title">Enable JavaScript</string>
+    <string name="settings_js_desc">Required by most interactive websites.</string>
+    <string name="settings_desktop_title">Request Desktop Sites by Default</string>
+    <string name="settings_desktop_desc">Use desktop viewport user-agent for new tabs.</string>
+    <string name="settings_account_section">Cloud Sync Account</string>
+    <string name="settings_signed_in_as">Signed in as %1$s</string>
+
+    <!-- Messages -->
+    <string name="bookmark_saved">Saved to Vortex Bookmarks</string>
+    <string name="bookmark_removed">Removed from Bookmarks</string>
+    <string name="history_cleared">Synced history cleared</string>
+</resources>

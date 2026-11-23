@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Neon Violet Spiral Arm -->
+    <path
+        android:fillColor="#9D4EDD"
+        android:pathData="M54,23 C71,23 84,35 84,52 C84,59 81,66 76,71 C78,61 73,48 63,41 C55,35 44,35 37,40 C41,30 47,23 54,23 Z" />
+    <!-- Outer Electric Cyan Spiral Arm -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,85 C37,85 24,73 24,56 C24,49 27,42 32,37 C30,47 35,60 45,67 C53,73 64,73 71,68 C67,78 61,85 54,85 Z" />
+    <!-- Inner Bright Cyan Vortex Blade -->
+    <path
+        android:fillColor="#6CF2FF"
+        android:pathData="M76,38 C72,30 62,27 52,30 C42,33 35,42 36,53 C37,57 39,61 42,64 C40,56 44,47 52,43 C60,39 69,42 74,48 C77,45 78,41 76,38 Z" />
+    <!-- Inner Radiant Violet Counter-Blade -->
+    <path
+        android:fillColor="#C77DFF"
+        android:pathData="M32,70 C36,78 46,81 56,78 C66,75 73,66 72,55 C71,51 69,47 66,44 C68,52 64,61 56,65 C48,69 39,66 34,60 C31,63 30,67 32,70 Z" />
+    <!-- Sharp Central Vortex V Prism Core -->
+    <path
+        android:fillColor="#F4F6FF"
+        android:pathData="M45,45 L54,64 L63,45 L58,45 L54,54 L50,45 Z" />
+</vector>

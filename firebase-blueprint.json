@@ -1,0 +1,127 @@
+{
+  "entities": {
+    "Bookmark": {
+      "title": "Bookmark",
+      "description": "A user-saved webpage bookmark synchronized across devices.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Authenticated owner UID."
+        },
+        "title": {
+          "type": "string",
+          "description": "Page title for the bookmark."
+        },
+        "url": {
+          "type": "string",
+          "description": "Target webpage URL."
+        },
+        "domain": {
+          "type": "string",
+          "description": "Extracted hostname for display."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when bookmark was created (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when bookmark was updated (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": ["userId", "title", "url", "domain", "createdAt", "updatedAt"]
+    },
+    "HistoryEntry": {
+      "title": "HistoryEntry",
+      "description": "A non-incognito webpage visit recorded in the user's synced browsing history.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Authenticated owner UID."
+        },
+        "title": {
+          "type": "string",
+          "description": "Page title at time of visit."
+        },
+        "url": {
+          "type": "string",
+          "description": "Visited webpage URL."
+        },
+        "domain": {
+          "type": "string",
+          "description": "Extracted hostname."
+        },
+        "visitedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of the visit (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": ["userId", "title", "url", "domain", "visitedAt"]
+    },
+    "UserPreferences": {
+      "title": "UserPreferences",
+      "description": "Synchronized Vortex browser configuration and privacy settings.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Authenticated owner UID."
+        },
+        "defaultEngine": {
+          "type": "string",
+          "enum": ["VORTEX_NATIVE", "BRAVE", "MOJEEK", "WIKIPEDIA"],
+          "description": "Selected independent search engine."
+        },
+        "adBlockEnabled": {
+          "type": "boolean",
+          "description": "Whether VortexShield ad & tracker blocking is enabled."
+        },
+        "aiSearchEnabled": {
+          "type": "boolean",
+          "description": "Whether AI instant search answers are enabled."
+        },
+        "javascriptEnabled": {
+          "type": "boolean",
+          "description": "Whether WebView JavaScript execution is enabled."
+        },
+        "desktopModeDefault": {
+          "type": "boolean",
+          "description": "Whether new tabs request desktop user-agent by default."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of the latest preferences update (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "defaultEngine",
+        "adBlockEnabled",
+        "aiSearchEnabled",
+        "javascriptEnabled",
+        "desktopModeDefault",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": { "$ref": "#/entities/Bookmark" },
+      "description": "Per-user cloud-synced bookmarks."
+    },
+    "/users/{userId}/history/{entryId}": {
+      "schema": { "$ref": "#/entities/HistoryEntry" },
+      "description": "Per-user cloud-synced browsing history (never written in Incognito mode)."
+    },
+    "/users/{userId}/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/UserPreferences" },
+      "description": "Per-user browser and privacy preferences."
+    }
+  }
+}
